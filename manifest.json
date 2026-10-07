@@ -1,0 +1,10 @@
+{
+  "name":"Lana — iPhone AI",
+  "short_name":"Lana",
+  "start_url":"./",
+  "scope":"./",
+  "display":"standalone",
+  "background_color":"#05040b",
+  "theme_color":"#070611",
+  "description":"A futuristic local-first personal assistant for iPhone."
+}

@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+  <meta name="theme-color" content="#070611">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Lana">
+  <link rel="manifest" href="manifest.json">
+  <link rel="stylesheet" href="style.css">
+  <title>Lana — iPhone AI</title>
+</head>
+<body>
+  <div class="noise"></div>
+  <main class="app">
+    <header class="topbar">
+      <div>
+        <div class="brand">LANA<span>°</span></div>
+        <div class="eyebrow"><i id="statusDot"></i><span id="status">SYSTEM ONLINE</span></div>
+      </div>
+      <div class="top-actions">
+        <button class="glass icon" id="shareBtn" aria-label="Share">↗</button>
+        <button class="glass icon" id="installBtn" aria-label="Install">＋</button>
+      </div>
+    </header>
+
+    <section class="hero">
+      <div class="orb-shell" id="orb">
+        <div class="orb-core">
+          <div class="orb-eye"></div>
+          <div class="orb-ring r1"></div>
+          <div class="orb-ring r2"></div>
+          <div class="orb-ring r3"></div>
+        </div>
+      </div>
+      <div class="hero-copy">
+        <div class="tiny">PERSONAL INTELLIGENCE</div>
+        <h1 id="headline">Lana is awake.</h1>
+        <p id="subline">Tap <b>“Talk to Lana”</b> and type your command.</p>
+      </div>
+    </section>
+
+    <section class="command glass">
+      <div class="input-row">
+        <input id="command" autocomplete="off" placeholder="Ask Lana anything...">
+        <button id="send" class="send">➤</button>
+      </div>
+      <button id="mic" class="mic"><span>◉</span><strong>Talk to Lana</strong><small>TEXT → VOICE REPLY</small></button>
+      <div class="chips">
+        <button data-cmd="What's my status?">Status</button>
+        <button data-cmd="Start a 25 minute focus timer">Focus</button>
+        <button data-cmd="Open YouTube">YouTube</button>
+        <button data-cmd="Search Google for AI news">Search</button>
+        <button data-cmd="What is the weather">Weather</button>
+        <button data-cmd="Calculate 25 * 4 + 10">Calc</button>
+      </div>
+    </section>
+
+    <section class="grid">
+      <button class="tile glass" data-panel="tasks"><span class="tile-icon">✓</span><b>Mission</b><small>Tasks</small></button>
+      <button class="tile glass" data-panel="notes"><span class="tile-icon">✦</span><b>Memory</b><small>Notes</small></button>
+      <button class="tile glass" data-panel="timer"><span class="tile-icon">◷</span><b>Focus</b><small>Timer</small></button>
+      <button class="tile glass" data-panel="tools"><span class="tile-icon">⌁</span><b>Tools</b><small>Utilities</small></button>
+      <button class="tile glass" data-panel="weather"><span class="tile-icon">☁</span><b>Weather</b><small>Live</small></button>
+      <button class="tile glass" data-panel="voice"><span class="tile-icon">◉</span><b>Voice</b><small>Lana voice</small></button>
+    </section>
+
+    <section class="dashboard glass">
+      <div class="section-head"><div><div class="tiny">LIVE FEED</div><h2>Activity</h2></div><button id="clearLog">Clear</button></div>
+      <div id="log" class="log"></div>
+    </section>
+
+    <section class="dashboard glass">
+      <div class="section-head"><div><div class="tiny">QUICK INTELLIGENCE</div><h2>Command Center</h2></div></div>
+      <div class="stats">
+        <div><span>Battery</span><b id="battery">--</b></div>
+        <div><span>Network</span><b id="network">--</b></div>
+        <div><span>Time</span><b id="clock">--:--</b></div>
+      </div>
+    </section>
+
+    <footer>LANA • iPHONE EDITION • LOCAL-FIRST</footer>
+  </main>
+
+  <dialog id="panel">
+    <div class="dialog-head"><div id="panelTitle">Lana</div><button id="closePanel">×</button></div>
+    <div id="panelBody"></div>
+  </dialog>
+
+  <div id="toast"></div>
+  <script src="app.js"></script>
+</body>
+</html>
